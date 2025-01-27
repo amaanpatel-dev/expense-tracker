@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const li = document.createElement("li");
       li.innerHTML = `
         <div>
-          <span>${expense.name} - ₹${expense.amount.toFixed(2)}</span>
+          <span>${expense.name} - ${expense.amount.toFixed(2)}</span>
           <small>${formatDate(expense.id)}</small>
         </div>
         <button data-id="${expense.id}">Delete</button>
