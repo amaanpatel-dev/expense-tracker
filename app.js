@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const li = document.createElement("li");
       li.innerHTML = `
         <div>
-          <span>${expense.name} - ${expense.amount.toFixed(2)}</span>
+          <span>${expense.name} - ₹${expense.amount.toFixed(2)}</span>
           <small>${formatDate(expense.id)}</small>
         </div>
         <button data-id="${expense.id}">Delete</button>
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Update the total amount displayed
   function updateTotal() {
     totalAmount = calculateTotal();
-    totalAmountDisplay.textContent = `₹${totalAmount.toFixed(2)}`;
+    totalAmountDisplay.textContent = `${totalAmount.toFixed(2)}`;
   }
 
   // Format the date from an expense's ID
